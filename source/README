@@ -1,0 +1,101 @@
+# Sniffer
+
+**《计算机通信网络（A类）》课程设计大作业——网络嗅探器**
+
+**Date:2019-12-17**
+
+## 开发环境
+
+- Windows 10
+- QT 5.12.0
+- Qt Creator 4.8.0
+- Winpcap 4.1 Beta5
+- gcc version 8.2.0 (MinGW.org GCC-8.2.0-5)
+
+## 文件结构
+
+├── README.md
+
+├── bin
+
+│   ├── CoolSniffer.exe
+
+│   └── WinPcap_4_1_3.exe
+
+├── include
+
+│   └── 4.1beta5_WpdPack.zip
+
+├── sniffer.mp4
+
+├── source
+
+│   ├── Sniff.pro
+
+│   ├── Sniff.pro.user
+
+│   ├── Sniff.pro.user.14fffd8
+
+│   ├── Sniff.pro.user.993eb6e
+
+│   ├── arp.cpp
+
+│   ├── avatar.ico
+
+│   ├── capthread.cpp
+
+│   ├── dialog.cpp
+
+│   ├── dialog.h
+
+│   ├── dialog.ui
+
+│   ├── global.h
+
+│   ├── ipv4.cpp
+
+│   ├── ipv6.cpp
+
+│   ├── logo.rc
+
+│   ├── main.cpp
+
+│   ├── mainwindow.cpp
+
+│   ├── mainwindow.h
+
+│   ├── mainwindow.ui
+
+│   ├── packetlist.cpp
+
+│   ├── protocol.h
+
+│   ├── rarp.cpp
+
+│   ├── tcpdialog.cpp
+
+│   ├── tcpdialog.h
+
+│   └── tcpdialog.ui
+
+└── 大作业实验报告.docx
+
+## 使用方法
+
+### 安装
+
+1. 使用打包好的安装软件：
+   1. 运行目录bin下的CoolSniffer.exe安装软件并运行。
+   2. 如果显示缺少wpcap.dll，表示系统中没有安装Winpcap环境，运行目录bin下的WinPcap_4_1_3.exe安装Winpcap软件。
+2. 使用Qt Creator通过源码编译：
+   1. 使用Qt Creator打开目录source下的Sniff.pro，编译运行。
+   2. 如果显示缺少头文件等情况，解压目录include下的4.1beta5_WpdPack.zip，并更改Sniff.pro的相应字段为上述目录，即添加Winpcap开发环境。
+
+### 使用
+
+1. 抓包：选择网络适配器——按下“Start”开始——按下“Stop 结束”——点击报文查看详细信息——点击“Save”可以保存数据。
+2. 过滤：选择网络适配器——设置 Filter 内容——按下“Start”开始——按下“Stop”结束——点击查看详细信息
+3. 查询：选择网络适配器——按下“Start”开始——按下“Stop”结束——点击查看详细信息——输入关键字——点击“Search”搜索。
+4. IP重组：选择网络适配器——选中“IP Regroup”——按下“Start”开始——按下“Stop”结束 ——点击查看详细信息——IP 重组后的报文会在 Abstract 部分显示。
+5. TCP重组：选择网络适配器——选中“IP Regroup”——按下“Start”开始——按下“Stop”结束——点击查看详细信息——选择指定的报文——点击“TCP Regroup”——出现重组后的报文信息。
+
