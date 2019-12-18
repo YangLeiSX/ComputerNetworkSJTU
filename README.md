@@ -10,3 +10,5 @@
 https://download.csdn.net/download/hbhgyu/10540829
 
 增加了IP重组和TCP重组功能
+
+使用Qt Creator工具开发，编译器使用MinGW，使用windeplyqt打包，最后使用Inno Setup Compiler打包成安装包。
